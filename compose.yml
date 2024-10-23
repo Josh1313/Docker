@@ -1,0 +1,10 @@
+version: '3'
+services:
+  transformers-notebook:
+    build: ./
+    ports:
+      - 8000:8888
+    volumes:
+      - ./:/home/jovyan  # Mounts the local 'notebooks' folder to the container
+    environment:
+      - JUPYTER_TOKEN=Josh  # To use JupyterLab interface
